@@ -181,22 +181,19 @@ The system continuously switches between global planning and local safety behavi
 on environmental certainty.
 
 
-https://github.com/user-attachments/assets/a69d1e50-ebab-41b9-88b5-52e7b9513079
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b9739df3-2ec4-45ec-bd63-3482856524fc" controls width="90%"></video>
+</p>
+<p align="center"><i>Real-time mapping and A*-driven navigation to user-selected waypoints in dense corridors.</i></p>
 
-
+<br><br>
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a69d1e50-ebab-41b9-88b5-52e7b9513079" width="80%">
+  <img src="https://github.com/user-attachments/assets/f8286292-b41c-43ad-b79c-c7caccfe74ee" width="90%">
 </p>
-<p align="center"><i>Smooth transition from local obstacle avoidance to global A* planning as mapping confidence increases.</i></p>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/196df5e9-f534-43ae-a9a2-493e9d19ccd8" width="80%">
-</p>
-<p align="center"><i>Real-time mapping and A* navigation to user-selected waypoints in dense corridors.</i></p>
-
+<p align="center"><i>Autonomous transition from reactive local avoidance to global A* navigation as mapping improves.</i></p>
 
 
 
