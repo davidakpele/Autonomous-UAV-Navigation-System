@@ -30,16 +30,6 @@ Autonomous UAV navigation system featuring real-time 3D occupancy-grid mapping, 
 </p>
 
 
-### Real-time A* path planning through dense urban structures, maintaining safe and efficient flight corridors.
-
-
-
-
-
-
-
-
-
 ## System Capabilities
 | Capability                    | Technical Summary                                                                                                                   |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
