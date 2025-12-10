@@ -51,73 +51,53 @@ Below is the real signal wiring used in this navigation stack:
 
 
 ### Data update rates:
-/depth_camera ~30 Hz
 
-/scan ~10 Hz
-
-Setpoints: 10–20 Hz
-
-Replanning whenever deviation or map changes
+- /depth_camera ~30 Hz
+- /scan ~10 Hz
+- Setpoints: 10–20 Hz
+- Replanning whenever deviation or map changes
 
 
 ## Algorithms & Techniques
 
 ### Sensor Fusion (depth_avoidance.py)
 
-Combines depth + LiDAR with reliability weighting
-
-Median-based filtering to reject noise
-
-Safety overrides when distance < thresholds
-
-Generates front/left/right clearance corridors
+- Combines depth + LiDAR with reliability weighting
+- Median-based filtering to reject noise
+- Safety overrides when distance < thresholds
+- Generates front/left/right clearance corridors
 
 ### 3D Mapping (mapping_node.py)
-
-Ray-tracing from sensor origin to detected hit
-
-Voxel height stacking → vertical building shapes
-
-Ghost clearing to erase outdated obstacles
-
-Rotation-aware filtering reduces distortion at turns
+- Ray-tracing from sensor origin to detected hit
+- Voxel height stacking → vertical building shapes
+- Ghost clearing to erase outdated obstacles
+- Rotation-aware filtering reduces distortion at turns
 
 ### Global A* Planning (path_planner.py)
-
-Real-time A* search over occupancy grid
-
-Dynamic replanning if path blocked
-
-Cost inflation around obstacles for clearance safety
+- Real-time A* search over occupancy grid
+- Dynamic replanning if path blocked
+- Cost inflation around obstacles for clearance safety
 
 ### Local Navigation (autonomous_navigator.py)
-
-Path tracking + lateral centering in corridors
-
-Adaptive forward speed based on heading alignment
-
-Collision stop-and-slide behavior when blocked
-
-Smooth yaw blending to reduce oscillation
+- Path tracking + lateral centering in corridors
+- Adaptive forward speed based on heading alignment
+- Collision stop-and-slide behavior when blocked
+- Smooth yaw blending to reduce oscillation
 
 
 ### PX4 Offboard Flight Control
 
-Direct setpoints in ROS → PX4 NED
-
-Automated arming, set-home, takeoff, landing fail-safe
+- Direct setpoints in ROS → PX4 NED
+- Automated arming, set-home, takeoff, landing fail-safe
 
 ## Installation & Setup
 
 ### Dependencies
 
-ROS 2 Jazzy
-
-PX4 Firmware (Offboard enabled)
-
-GZ Sim 8.10.0
-
-Python 3.10+
+- ROS 2 Jazzy
+- PX4 Firmware (Offboard enabled)
+- GZ Sim 8.10.0
+- Python 3.10+
 
 ### Create & Prepare Workspace
 ```
@@ -155,13 +135,9 @@ ros2 launch autonomous_drone drone.launch.py
 ## How It Works (Navigation Flow)
 
 1. User clicks a 2D Goal Pose in RViz — sends /goal_pose.
-
 2. UAV begins motion using local fused obstacle avoidance while the map is still unknown.
-
 3. Once a usable map is built, the A* planner generates a global route.
-
 4. UAV follows global path, but switches back to avoidance if blocked.
-
 5. UAV slows down and stops once the goal is reached (<1 m proximity).
 
 The system continuously switches between global planning and local safety behaviors depending
@@ -183,23 +159,19 @@ on environmental certainty.
 
 ## Known Limitations
 
-Mapping may distort slightly during **rapid yaw rotation** before pose stabilization.
-
-Requires both **LiDAR and depth camera** views overlapping for best reconstruction.
-  
-A* replanning frequency can increase in **dense obstacle clusters**, affecting speed.
-  
-System currently tested only in **PX4 SITL simulation** (no GPS fusion enabled).
- 
-Narrow vertical gaps may not be detected if outside depth/scan field-of-view.
+- Mapping may distort slightly during **rapid yaw rotation** before pose stabilization.
+- Requires both **LiDAR and depth camera** views overlapping for best reconstruction.
+- A* replanning frequency can increase in **dense obstacle clusters**, affecting speed.
+- System currently tested only in **PX4 SITL simulation** (no GPS fusion enabled).
+- Narrow vertical gaps may not be detected if outside depth/scan field-of-view.
 
 ## Future Work
 
-Hardware validation on real UAV (Jetson + PX4 flight controller)
-Outdoor support with **GPS + IMU fusion**
-Semantic layer in mapping (roads, buildings, no-fly zones)
-Moving obstacle tracking and dynamic path prediction
-Multi-UAV coordination for collaborative exploration
+- Hardware validation on real UAV (Jetson + PX4 flight controller)
+- Outdoor support with **GPS + IMU fusion**
+- Semantic layer in mapping (roads, buildings, no-fly zones)
+- Moving obstacle tracking and dynamic path prediction
+- Multi-UAV coordination for collaborative exploration
 
 ## License
 
