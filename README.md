@@ -16,7 +16,7 @@ Autonomous UAV navigation system featuring real-time 3D occupancy-grid mapping, 
   <img src="https://img.shields.io/badge/Platform-Linux%20(Ubuntu%2024.04)-lightgrey.svg"/>
   
   <!-- Navigation Capabilities -->
-  <img src="https://img.shields.io/badge/3D%20Mapping-Occupancy%20Grid-purple.svg"/>
+  <img src="https://img.shields.io/badge/2.5D%20Mapping-Height--Aware%20Voxels-purple.svg"/>
   <img src="https://img.shields.io/badge/Path%20Planning-A*%20(2.5D)-brightgreen.svg"/>
   <img src="https://img.shields.io/badge/Sensor%20Fusion-LiDAR+Depth-green.svg"/>
   <img src="https://img.shields.io/badge/Collision%20Avoidance-Safety%20Filtering-yellow.svg"/>
@@ -24,7 +24,7 @@ Autonomous UAV navigation system featuring real-time 3D occupancy-grid mapping, 
   
   <!-- Technical Details -->
   <img src="https://img.shields.io/badge/Ray%20Tracing-Bresenham-blue.svg"/>
-  <img src="https://img.shields.io/badge/Voxel%20Based-Yes-purple.svg"/>
+  <img src="https://img.shields.io/badge/Yaw%20Filtering-Rotation%20Stabilized-orange.svg"/>
   <img src="https://img.shields.io/badge/Real--time-30Hz%20Mapping-blue.svg"/>
   <img src="https://img.shields.io/badge/Resolution-0.1m-orange.svg"/>
 </p>
