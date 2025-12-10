@@ -173,6 +173,13 @@ The system continuously switches between global planning and local safety behavi
 on environmental certainty.
 
 
+### Real-time mapping and A* navigation to user-selected waypoints in dense corridors.
+
+![DEMO_A_1](https://github.com/user-attachments/assets/c75fb21c-5bbe-46b2-9993-45bd84be1314)
+
+
+
+
 ## Configuration Parameters (so users can tune your system)
 
 | Parameter              | Default Value   | Purpose / Effect                                    | Tune In (Script / Location)                             |
