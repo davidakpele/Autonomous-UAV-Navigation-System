@@ -49,7 +49,8 @@ Autonomous UAV navigation system featuring real-time 3D occupancy-grid mapping, 
 ## Architecture
 ### Functional Overview
 
-<img width="1920" height="1080" alt="Screenshot from 2025-12-10 23-05-25" src="https://github.com/user-attachments/assets/e63929eb-e052-4f6b-b56d-6400418571a4" />
+<img width="746" height="893" alt="Screenshot from 2025-12-10 23-04-43" src="https://github.com/user-attachments/assets/ee2be208-e61a-4b60-a65f-fb6c0c5c666a" />
+
 
 
 ## ROS 2 Node Overview
