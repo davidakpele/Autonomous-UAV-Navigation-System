@@ -189,7 +189,7 @@ class MappingNode(Node):
         self.drone_pub = self.create_publisher(Marker, "/drone_marker", 10)
         
         self.create_timer(0.2, self.timer_cb)
-        self.get_logger().info("🌈 RAINBOW MAPPER STARTED")
+        self.get_logger().info("MAPPER STARTED")
 
     def pos_cb(self, msg):
         if not msg.xy_valid: return
